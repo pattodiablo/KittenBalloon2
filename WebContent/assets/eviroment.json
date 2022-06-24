@@ -1,0 +1,167 @@
+{
+  "Ground": [
+    {
+      "type": "image",
+      "key": "floor",
+      "url": "assets/sprites/floor.png",
+      "overwrite": false
+    },
+    {
+      "type": "script",
+      "key": "Piso",
+      "url": "assets/canvas/prefabs/Piso.js"
+    },
+    {
+      "type": "image",
+      "key": "grass",
+      "url": "assets/sprites/grass.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "platformTipo1",
+      "url": "assets/sprites/platformTipo1.png",
+      "overwrite": false
+    },
+    {
+      "type": "script",
+      "key": "Platform1",
+      "url": "assets/sprites/Platform1.js"
+    },
+    {
+      "type": "image",
+      "key": "coinStar",
+      "url": "assets/sprites/coinStar.png",
+      "overwrite": false
+    },
+    {
+      "type": "script",
+      "key": "CoinStar",
+      "url": "assets/sprites/CoinStar.js"
+    },
+    {
+      "type": "image",
+      "key": "background",
+      "url": "assets/sprites/background.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "pauseBtn",
+      "url": "assets/sprites/pauseBtn.png",
+      "overwrite": false
+    },
+    {
+      "type": "script",
+      "key": "introScene",
+      "url": "assets/canvas/IntroScene.js"
+    },
+    {
+      "type": "image",
+      "key": "introScene1",
+      "url": "assets/sprites/introScene.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "goverScene",
+      "url": "assets/sprites/goverScene.png",
+      "overwrite": false
+    },
+    {
+      "type": "script",
+      "key": "goverScene1",
+      "url": "assets/canvas/goverScene.js"
+    },
+    {
+      "type": "image",
+      "key": "greatJobScreen",
+      "url": "assets/sprites/greatJobScreen.png",
+      "overwrite": false
+    },
+    {
+      "type": "script",
+      "key": "Boot",
+      "url": "assets/canvas/Boot.js"
+    },
+    {
+      "type": "image",
+      "key": "emptyBg",
+      "url": "assets/sprites/emptyBg.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "platformTipo2",
+      "url": "assets/sprites/platformTipo2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "platformTipo3",
+      "url": "assets/sprites/platformTipo3.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "backLoad",
+      "url": "assets/sprites/backLoad.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "progressBar",
+      "url": "assets/sprites/progressBar.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "loadingTitle",
+      "url": "assets/sprites/loadingTitle.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "playBtn",
+      "url": "assets/sprites/playBtn.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "LevelScreen",
+      "url": "assets/sprites/LevelScreen.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "finalBg",
+      "url": "assets/sprites/finalBg.png",
+      "overwrite": false
+    }
+  ],
+  "BitmapFont": [
+    {
+      "type": "bitmapFont",
+      "key": "VT323-Regular.fnt",
+      "textureURL": "assets/fonts/VT323-Regular.png",
+      "atlasURL": "assets/fonts/VT323-Regular.fnt.xml",
+      "xSpacing": 0,
+      "ySpacing": 0
+    },
+    {
+      "type": "bitmapFont",
+      "key": "PixelFont",
+      "textureURL": "assets/fonts/PixelFont_0.png",
+      "atlasURL": "assets/fonts/PixelFont.xml",
+      "xSpacing": 0,
+      "ySpacing": 0
+    }
+  ],
+  "meta": {
+    "generated": "1564760648873",
+    "app": "Phaser Editor",
+    "url": "http://phasereditor.boniatillo.com",
+    "version": "1.0",
+    "copyright": "Arian Fornaris (c) 2015,2016"
+  }
+}

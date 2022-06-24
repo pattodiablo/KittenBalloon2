@@ -1,0 +1,58 @@
+{
+  "canvas-version": 2,
+  "settings": {
+    "className": "CoinStar",
+    "sceneWidth": 640,
+    "sceneHeight": 360,
+    "generateOnSave": true,
+    "enableStepping": false,
+    "lang": "JAVA_SCRIPT",
+    "baseClass": "Phaser.Sprite",
+    "backgroundColor": [
+      180,
+      180,
+      180
+    ],
+    "gridColor": [
+      200,
+      200,
+      200
+    ],
+    "showGrid": true
+  },
+  "stateSettings": {
+    "stageBackgroundColor": [
+      0,
+      0,
+      0
+    ],
+    "autoLoad": true,
+    "preloadSpriteId": "",
+    "preloadSprite_direction": 0,
+    "load.pack": []
+  },
+  "world": {
+    "type": "group",
+    "id": "dd000772-6d77-43f4-af57-77c984ffff44",
+    "info": {
+      "editorName": "CoinStar",
+      "setAll": [],
+      "children": [{
+        "type": "image",
+        "id": "fc8140d3-e91d-4090-b24b-60b29350fb5f",
+        "asset": "0",
+        "info": {
+          "editorName": "coinStar",
+          "editorField": true
+        }
+      }]
+    }
+  },
+  "type": "SPRITE",
+  "asset-table": {"0": {
+    "file": "WebContent/assets/eviroment.json",
+    "section": "Ground",
+    "asset": "coinStar"
+  }},
+  "prefab-table": {}
+}
