@@ -37,7 +37,7 @@
     {
       "type": "script",
       "key": "CoinStar",
-      "url": "assets/sprites/CoinStar.js"
+      "url": "assets/canvas/prefabs/CoinStar.js"
     },
     {
       "type": "image",
@@ -52,11 +52,6 @@
       "overwrite": false
     },
     {
-      "type": "script",
-      "key": "introScene",
-      "url": "assets/canvas/IntroScene.js"
-    },
-    {
       "type": "image",
       "key": "introScene1",
       "url": "assets/sprites/introScene.png",
@@ -69,20 +64,10 @@
       "overwrite": false
     },
     {
-      "type": "script",
-      "key": "goverScene1",
-      "url": "assets/canvas/goverScene.js"
-    },
-    {
       "type": "image",
       "key": "greatJobScreen",
       "url": "assets/sprites/greatJobScreen.png",
       "overwrite": false
-    },
-    {
-      "type": "script",
-      "key": "Boot",
-      "url": "assets/canvas/Boot.js"
     },
     {
       "type": "image",
@@ -183,7 +168,7 @@
     }
   ],
   "meta": {
-    "generated": "1656344557747",
+    "generated": "1656349911392",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

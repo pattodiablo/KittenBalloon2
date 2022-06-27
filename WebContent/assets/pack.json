@@ -8,7 +8,7 @@
     },
     {
       "type": "script",
-      "key": "player2",
+      "key": "player",
       "url": "assets/canvas/prefabs/Player.js"
     },
     {
@@ -24,7 +24,7 @@
     }
   ],
   "meta": {
-    "generated": "1564154145975",
+    "generated": "1656350183842",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

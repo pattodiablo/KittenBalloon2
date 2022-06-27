@@ -413,7 +413,7 @@
   "prefab-table": {
     "0": "WebContent/assets/canvas/prefabs/Piso.canvas",
     "1": "WebContent/assets/sprites/Platform1.canvas",
-    "2": "WebContent/assets/sprites/CoinStar.canvas",
+    "2": "WebContent/assets/canvas/prefabs/CoinStar.canvas",
     "3": "WebContent/assets/canvas/prefabs/Vida.canvas",
     "4": "WebContent/assets/canvas/prefabs/Enemy.canvas",
     "5": "WebContent/assets/canvas/prefabs/Player.canvas"

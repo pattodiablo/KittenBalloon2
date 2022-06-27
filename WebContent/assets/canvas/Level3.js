@@ -66,6 +66,16 @@ Level3.prototype.create = function () {
 	var _platformTipo2 = new Platform1(this.game, 387.0, 215.0);
 	_Plataformas.add(_platformTipo2);
 	
+	this.add.sprite(322.0, 837.0, 'montain2', null, _Plataformas);
+	
+	this.add.sprite(552.0, 913.0, 'montain2', null, _Plataformas);
+	
+	this.add.sprite(777.0, 851.0, 'montain2', null, _Plataformas);
+	
+	this.add.sprite(-84.0, 824.0, 'montain2', null, _Plataformas);
+	
+	this.add.sprite(-148.0, 639.0, 'montain2', null, _Plataformas);
+	
 	var _Coins = this.add.group();
 	
 	var _coinStar = new CoinStar(this.game, 564.0, 720.0);
@@ -100,7 +110,9 @@ Level3.prototype.create = function () {
 	var _plataformasMove = this.add.group();
 	_plataformasMove.position.set(471.0, 267.0);
 	
-	var _player = new Player(this.game, 81.0, 882.0);
+	this.add.sprite(-380.0, 230.0, 'platformTipo3', null, _plataformasMove);
+	
+	var _player = new Player(this.game, 42.0, 583.0);
 	this.add.existing(_player);
 	
 	var _greatJobScreen = this.add.sprite(0.0, -960.0, 'greatJobScreen');

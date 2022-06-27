@@ -7,28 +7,22 @@
 
 
 /**
- * CoinStar
+ * PruebaPrefab
  * @param {Phaser.Game} aGame A reference to the currently running game.
  * @param {Number} aX The x coordinate (in world space) to position the Sprite at.
  * @param {Number} aY The y coordinate (in world space) to position the Sprite at.
  * @param {any} aKey This is the image or texture used by the Sprite during rendering. It can be a string which is a reference to the Cache entry, or an instance of a RenderTexture or PIXI.Texture.
  * @param {any} aFrame If this Sprite is using part of a sprite sheet or texture atlas you can specify the exact frame to use by giving a string or numeric index.
  */
-function CoinStar(aGame, aX, aY, aKey, aFrame) {
+function PruebaPrefab(aGame, aX, aY, aKey, aFrame) {
 	Phaser.Sprite.call(this, aGame, aX, aY, aKey || 'coinStar', aFrame == undefined || aFrame == null? null : aFrame);
-	var _anim_shine = this.animations.add('shine', [], 15, true);
-	_anim_shine.play();
-	
-	// fields
-	
-	this.fCoinStar = this;
 	
 }
 
 /** @type Phaser.Sprite */
-var CoinStar_proto = Object.create(Phaser.Sprite.prototype);
-CoinStar.prototype = CoinStar_proto;
-CoinStar.prototype.constructor = CoinStar;
+var PruebaPrefab_proto = Object.create(Phaser.Sprite.prototype);
+PruebaPrefab.prototype = PruebaPrefab_proto;
+PruebaPrefab.prototype.constructor = PruebaPrefab;
 
 /* --- end generated code --- */
 // -- user code here --
