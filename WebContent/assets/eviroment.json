@@ -137,6 +137,31 @@
       "key": "finalBg",
       "url": "assets/sprites/finalBg.png",
       "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "montain1",
+      "url": "assets/sprites/montain1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "montain2",
+      "url": "assets/sprites/montain2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "montain3",
+      "url": "assets/sprites/montain3.png",
+      "overwrite": false
+    },
+    {
+      "type": "atlas",
+      "key": "AnimationAtlas",
+      "textureURL": "assets/atlas/AnimationAtlas.png",
+      "atlasURL": "assets/atlas/AnimationAtlas.xml",
+      "format": "TEXTURE_ATLAS_XML_STARLING"
     }
   ],
   "BitmapFont": [
@@ -158,7 +183,7 @@
     }
   ],
   "meta": {
-    "generated": "1564760648873",
+    "generated": "1656344557747",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

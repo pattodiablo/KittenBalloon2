@@ -38,7 +38,7 @@
       "editorName": "player",
       "setAll": [],
       "children": [{
-        "type": "image",
+        "type": "atlas-sprite",
         "id": "57390a5d-a3e7-4561-9b27-25c83426cf28",
         "asset": "0",
         "info": {
@@ -48,16 +48,50 @@
           "pivot.y": 0.5,
           "anchor.x": 0.5,
           "anchor.y": 0.5,
-          "data": "\tthis.data = {game:this.game.state﻿.getCurrentState(),score:0}"
+          "data": "\tthis.data = {game:this.game.state﻿.getCurrentState(),score:0}",
+          "animations": [
+            {
+              "name": "idle",
+              "frameRate": 1,
+              "loop": true,
+              "field": true,
+              "autoPlay": true,
+              "frames": [
+                "player_idle0000",
+                "player_idle0001"
+              ]
+            },
+            {
+              "name": "lookLeft",
+              "frameRate": 60,
+              "field": true,
+              "frames": ["player_left0000"]
+            },
+            {
+              "name": "lookRight",
+              "frameRate": 60,
+              "frames": ["player_right0000"]
+            },
+            {
+              "name": "blink",
+              "frameRate": 12,
+              "field": true,
+              "frames": [
+                "player_blink0000",
+                "player_blink0001"
+              ]
+            }
+          ]
         }
       }]
     }
   },
   "type": "SPRITE",
   "asset-table": {"0": {
-    "file": "WebContent/assets/pack.json",
-    "section": "player",
-    "asset": "player1"
+    "file": "WebContent/assets/eviroment.json",
+    "section": "Ground",
+    "asset": "AnimationAtlas",
+    "sprite": "player_idle0001"
   }},
   "prefab-table": {}
 }

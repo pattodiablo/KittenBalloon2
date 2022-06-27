@@ -43,7 +43,14 @@
         "asset": "0",
         "info": {
           "editorName": "coinStar",
-          "editorField": true
+          "editorField": true,
+          "animations": [{
+            "name": "shine",
+            "frameRate": 15,
+            "loop": true,
+            "autoPlay": true,
+            "frames": []
+          }]
         }
       }]
     }
