@@ -75,6 +75,11 @@ Level.prototype.create = function () {
 	var _platformTipo1 = new Platform1(this.game, 1686.0, 631.0);
 	_Plataformas.add(_platformTipo1);
 	
+	this.add.sprite(1258.0, 781.0, 'montain1', null, _Plataformas);
+	
+	var _montain = this.add.sprite(774.0, 140.0, 'montain1', null, _Plataformas);
+	_montain.scale.set(1.0, -1.0);
+	
 	var _plataformasMove = this.add.group();
 	_plataformasMove.position.set(-37.0, -199.0);
 	
@@ -94,7 +99,10 @@ Level.prototype.create = function () {
 	
 	var _Enemies = this.add.group();
 	
-	var _enemy = new Enemy(this.game, 1136.0, 200.0);
+	var _enemy = new Enemy(this.game, 14.0, 317.0);
+	_Enemies.add(_enemy);
+	
+	var _enemy = new Enemy(this.game, 1208.0, 391.0);
 	_Enemies.add(_enemy);
 	
 	var _EnemyL2 = this.add.group();
@@ -147,6 +155,7 @@ Level.prototype.create = function () {
 	this.fCoinStar5 = _coinStar5;
 	this.fCoinStar5 = _coinStar5;
 	this.fEnemies = _Enemies;
+	this.fEnemy = _enemy;
 	this.fEnemy = _enemy;
 	this.fEnemyL2 = _EnemyL2;
 	this.fLives = _lives;

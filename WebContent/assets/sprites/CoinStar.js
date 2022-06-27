@@ -16,6 +16,8 @@
  */
 function CoinStar(aGame, aX, aY, aKey, aFrame) {
 	Phaser.Sprite.call(this, aGame, aX, aY, aKey || 'coinStar', aFrame == undefined || aFrame == null? null : aFrame);
+	var _anim_shine = this.animations.add('shine', [], 15, true);
+	_anim_shine.play();
 	
 	// fields
 	

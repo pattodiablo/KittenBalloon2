@@ -33,6 +33,7 @@
 		this._plataformas= plataformas;
 		this._platafmove = platafmove;
 		this._coins = coins;
+		this.isblinking=false;
 		
 
 		this._corazones = corazones;
@@ -688,13 +689,30 @@
 		
 		if(this._velocity.x>0.5){
 		
+				
+			this._state.fPlayer.animations.play("lookRight");
 			this._state.fPlayer.rotation=0.1;		
 		}
 		if(this._velocity.x<-0.5){
+			this._state.fPlayer.animations.play("lookLeft");
 			this._state.fPlayer.rotation=-0.1;	
 		}
 		
 		if(this._velocity.x>-0.5 && this._velocity.x<0.5){
+			
+		
+			
+			if(!this.isblinking){
+				this._state.time.events.add(2000, function(){
+					this._state.fPlayer.animations.play("blink");
+					this.isblinking=false;
+				}, this );
+				this.isblinking=true;
+			}else{
+				this._state.fPlayer.animations.play("idle");
+			}
+			
+
 			this._state.fPlayer.rotation=0;	
 		}
 	

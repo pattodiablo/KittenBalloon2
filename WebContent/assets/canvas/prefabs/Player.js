@@ -15,9 +15,14 @@
  * @param {any} aFrame If this Sprite is using part of a sprite sheet or texture atlas you can specify the exact frame to use by giving a string or numeric index.
  */
 function Player(aGame, aX, aY, aKey, aFrame) {
-	Phaser.Sprite.call(this, aGame, aX, aY, aKey || 'player1', aFrame == undefined || aFrame == null? null : aFrame);
+	Phaser.Sprite.call(this, aGame, aX, aY, aKey || 'AnimationAtlas', aFrame == undefined || aFrame == null? 'player_idle0001' : aFrame);
 	this.pivot.set(0.5, 0.5);
 	this.anchor.set(0.5, 0.5);
+	var _anim_idle = this.animations.add('idle', ['player_idle0000', 'player_idle0001'], 1, true);
+	this.animations.add('lookLeft', ['player_left0000'], 60, false);
+	this.animations.add('lookRight', ['player_right0000'], 60, false);
+	this.animations.add('blink', ['player_blink0000', 'player_blink0001'], 12, false);
+	_anim_idle.play();
 	this.data = 	this.data = {game:this.game.state﻿.getCurrentState(),score:0};
 	
 	// fields

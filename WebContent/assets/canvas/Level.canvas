@@ -180,6 +180,27 @@
                   "x": 1686,
                   "y": 631
                 }
+              },
+              {
+                "type": "image",
+                "id": "b6c1341b-691d-4a77-995c-00cc83792f59",
+                "asset": "2",
+                "info": {
+                  "editorName": "montain",
+                  "x": 1258,
+                  "y": 781
+                }
+              },
+              {
+                "type": "image",
+                "id": "318e0115-fec9-4734-840e-2f3ec380cd7a",
+                "asset": "2",
+                "info": {
+                  "editorName": "montain",
+                  "x": 774,
+                  "y": 140,
+                  "scale.y": -1
+                }
               }
             ]
           }
@@ -274,21 +295,38 @@
             "editorName": "Enemies",
             "editorField": true,
             "setAll": [],
-            "children": [{
-              "type": "prefab",
-              "prefab": "3",
-              "id": "a7b21c9b-d8e0-46e9-825b-e05349ff8372",
-              "asset-ref": {
-                "file": "WebContent/assets/enemy.json",
-                "section": "Enemy",
-                "asset": "enemy"
+            "children": [
+              {
+                "type": "prefab",
+                "prefab": "3",
+                "id": "a7b21c9b-d8e0-46e9-825b-e05349ff8372",
+                "asset-ref": {
+                  "file": "WebContent/assets/enemy.json",
+                  "section": "Enemy",
+                  "asset": "enemy"
+                },
+                "info": {
+                  "editorName": "enemy",
+                  "x": 14,
+                  "y": 317
+                }
               },
-              "info": {
-                "editorName": "enemy",
-                "x": 1136,
-                "y": 200
+              {
+                "type": "prefab",
+                "prefab": "3",
+                "id": "3923b454-00fb-4632-ae81-c73c337389dd",
+                "asset-ref": {
+                  "file": "WebContent/assets/enemy.json",
+                  "section": "Enemy",
+                  "asset": "enemy"
+                },
+                "info": {
+                  "editorName": "enemy",
+                  "x": 1208,
+                  "y": 391
+                }
               }
-            }]
+            ]
           }
         },
         {
@@ -387,7 +425,7 @@
         {
           "type": "image",
           "id": "009765c7-217f-40ca-9cb8-e79f2ba9cbb9",
-          "asset": "2",
+          "asset": "3",
           "info": {
             "editorName": "greatJobScreen",
             "editorField": true,
@@ -397,7 +435,7 @@
         {
           "type": "image",
           "id": "7f777e61-467e-4c99-a4e8-1cba11e5c577",
-          "asset": "3",
+          "asset": "4",
           "info": {
             "editorName": "pauseBtn",
             "editorField": true,
@@ -416,7 +454,7 @@
               {
                 "type": "image",
                 "id": "8f685243-55e6-4851-999d-dad8d228b181",
-                "asset": "4",
+                "asset": "5",
                 "info": {
                   "editorName": "LevelScreen",
                   "editorField": true,
@@ -426,7 +464,7 @@
               {
                 "type": "bitmapText",
                 "id": "c542d164-772d-4680-8235-5cab6396a6c3",
-                "asset": "5",
+                "asset": "6",
                 "info": {
                   "editorName": "PixelFont",
                   "editorField": true,
@@ -457,19 +495,24 @@
     "2": {
       "file": "WebContent/assets/eviroment.json",
       "section": "Ground",
-      "asset": "greatJobScreen"
+      "asset": "montain1"
     },
     "3": {
       "file": "WebContent/assets/eviroment.json",
       "section": "Ground",
-      "asset": "pauseBtn"
+      "asset": "greatJobScreen"
     },
     "4": {
       "file": "WebContent/assets/eviroment.json",
       "section": "Ground",
-      "asset": "LevelScreen"
+      "asset": "pauseBtn"
     },
     "5": {
+      "file": "WebContent/assets/eviroment.json",
+      "section": "Ground",
+      "asset": "LevelScreen"
+    },
+    "6": {
       "file": "WebContent/assets/eviroment.json",
       "section": "BitmapFont",
       "asset": "PixelFont"
