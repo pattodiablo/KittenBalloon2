@@ -2,7 +2,7 @@
   "canvas-version": 2,
   "settings": {
     "className": "Level3",
-    "sceneWidth": 640,
+    "sceneWidth": 1920,
     "sceneHeight": 960,
     "generateOnSave": true,
     "enableStepping": false,
@@ -133,6 +133,56 @@
                   "x": 387,
                   "y": 215
                 }
+              },
+              {
+                "type": "image",
+                "id": "d34b449e-7467-4cef-9bb9-8a84429e431b",
+                "asset": "2",
+                "info": {
+                  "editorName": "montain",
+                  "x": 322,
+                  "y": 837
+                }
+              },
+              {
+                "type": "image",
+                "id": "90b97afd-3de0-405a-bbb8-1ffc2063cf5a",
+                "asset": "2",
+                "info": {
+                  "editorName": "montain",
+                  "x": 552,
+                  "y": 913
+                }
+              },
+              {
+                "type": "image",
+                "id": "972da639-18be-4798-8ecd-3420e4370fb3",
+                "asset": "2",
+                "info": {
+                  "editorName": "montain",
+                  "x": 777,
+                  "y": 851
+                }
+              },
+              {
+                "type": "image",
+                "id": "ea4d52e9-ffb3-4939-b75e-df3a5daa796c",
+                "asset": "2",
+                "info": {
+                  "editorName": "montain",
+                  "x": -84,
+                  "y": 824
+                }
+              },
+              {
+                "type": "image",
+                "id": "8e642f2f-9091-4176-9113-277d1b2edbfe",
+                "asset": "2",
+                "info": {
+                  "editorName": "montain",
+                  "x": -148,
+                  "y": 639
+                }
               }
             ]
           }
@@ -152,7 +202,8 @@
                 "asset-ref": {
                   "file": "WebContent/assets/eviroment.json",
                   "section": "Ground",
-                  "asset": "coinStar"
+                  "asset": "AnimationAtlas",
+                  "sprite": "coin0000"
                 },
                 "info": {
                   "editorName": "coinStar",
@@ -167,7 +218,8 @@
                 "asset-ref": {
                   "file": "WebContent/assets/eviroment.json",
                   "section": "Ground",
-                  "asset": "coinStar"
+                  "asset": "AnimationAtlas",
+                  "sprite": "coin0000"
                 },
                 "info": {
                   "editorName": "coinStar1",
@@ -182,7 +234,8 @@
                 "asset-ref": {
                   "file": "WebContent/assets/eviroment.json",
                   "section": "Ground",
-                  "asset": "coinStar"
+                  "asset": "AnimationAtlas",
+                  "sprite": "coin0000"
                 },
                 "info": {
                   "editorName": "coinStar2",
@@ -302,7 +355,16 @@
             "x": 471,
             "y": 267,
             "setAll": [],
-            "children": []
+            "children": [{
+              "type": "image",
+              "id": "0a837932-6a31-407c-a4b9-c30b18facc01",
+              "asset": "3",
+              "info": {
+                "editorName": "platformTipo5",
+                "x": -380,
+                "y": 230
+              }
+            }]
           }
         },
         {
@@ -310,20 +372,21 @@
           "prefab": "5",
           "id": "fa97e99f-f958-4d94-88e0-08df9fe0b471",
           "asset-ref": {
-            "file": "WebContent/assets/pack.json",
-            "section": "player",
-            "asset": "player1"
+            "file": "WebContent/assets/eviroment.json",
+            "section": "Ground",
+            "asset": "AnimationAtlas",
+            "sprite": "player_idle0001"
           },
           "info": {
             "editorName": "player",
-            "x": 81,
-            "y": 882
+            "x": 42,
+            "y": 583
           }
         },
         {
           "type": "image",
           "id": "009765c7-217f-40ca-9cb8-e79f2ba9cbb9",
-          "asset": "2",
+          "asset": "4",
           "info": {
             "editorName": "greatJobScreen",
             "editorField": true,
@@ -333,7 +396,7 @@
         {
           "type": "image",
           "id": "7f777e61-467e-4c99-a4e8-1cba11e5c577",
-          "asset": "3",
+          "asset": "5",
           "info": {
             "editorName": "pauseBtn",
             "editorField": true,
@@ -352,7 +415,7 @@
               {
                 "type": "image",
                 "id": "f2f5423f-9e9a-48b5-a545-ab1497f428c5",
-                "asset": "4",
+                "asset": "6",
                 "info": {
                   "editorName": "LevelScreen",
                   "editorField": true,
@@ -362,7 +425,7 @@
               {
                 "type": "bitmapText",
                 "id": "15c4ae9e-d07e-4967-a4ca-e85fc1f1b374",
-                "asset": "5",
+                "asset": "7",
                 "info": {
                   "editorName": "PixelFont",
                   "editorField": true,
@@ -393,19 +456,29 @@
     "2": {
       "file": "WebContent/assets/eviroment.json",
       "section": "Ground",
-      "asset": "greatJobScreen"
+      "asset": "montain2"
     },
     "3": {
       "file": "WebContent/assets/eviroment.json",
       "section": "Ground",
-      "asset": "pauseBtn"
+      "asset": "platformTipo3"
     },
     "4": {
       "file": "WebContent/assets/eviroment.json",
       "section": "Ground",
-      "asset": "LevelScreen"
+      "asset": "greatJobScreen"
     },
     "5": {
+      "file": "WebContent/assets/eviroment.json",
+      "section": "Ground",
+      "asset": "pauseBtn"
+    },
+    "6": {
+      "file": "WebContent/assets/eviroment.json",
+      "section": "Ground",
+      "asset": "LevelScreen"
+    },
+    "7": {
       "file": "WebContent/assets/eviroment.json",
       "section": "BitmapFont",
       "asset": "PixelFont"
@@ -414,7 +487,7 @@
   "prefab-table": {
     "0": "WebContent/assets/canvas/prefabs/Piso.canvas",
     "1": "WebContent/assets/sprites/Platform1.canvas",
-    "2": "WebContent/assets/sprites/CoinStar.canvas",
+    "2": "WebContent/assets/canvas/prefabs/CoinStar.canvas",
     "3": "WebContent/assets/canvas/prefabs/Vida.canvas",
     "4": "WebContent/assets/canvas/prefabs/Enemy.canvas",
     "5": "WebContent/assets/canvas/prefabs/Player.canvas"

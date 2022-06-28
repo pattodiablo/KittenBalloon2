@@ -1,7 +1,7 @@
 {
   "canvas-version": 2,
   "settings": {
-    "className": "CoinStar",
+    "className": "PruebaPrefab",
     "sceneWidth": 640,
     "sceneHeight": 360,
     "generateOnSave": true,
@@ -27,39 +27,32 @@
       0
     ],
     "autoLoad": true,
-    "preloadSpriteId": "",
     "preloadSprite_direction": 0,
     "load.pack": []
   },
   "world": {
     "type": "group",
-    "id": "dd000772-6d77-43f4-af57-77c984ffff44",
+    "id": "c728215a-653b-4590-b473-b1b7614a2021",
     "info": {
-      "editorName": "CoinStar",
+      "editorName": "root",
+      "prefabOverride": ["position"],
       "setAll": [],
       "children": [{
         "type": "image",
-        "id": "fc8140d3-e91d-4090-b24b-60b29350fb5f",
-        "asset": "0",
+        "id": "c83fb01c-d166-4c80-be49-ba9c2729cd03",
+        "asset-ref": {
+          "file": "WebContent/assets/eviroment.json",
+          "section": "Ground",
+          "asset": "coinStar"
+        },
         "info": {
           "editorName": "coinStar",
-          "editorField": true,
-          "animations": [{
-            "name": "shine",
-            "frameRate": 15,
-            "loop": true,
-            "autoPlay": true,
-            "frames": []
-          }]
+          "prefabOverride": ["position"]
         }
       }]
     }
   },
   "type": "SPRITE",
-  "asset-table": {"0": {
-    "file": "WebContent/assets/eviroment.json",
-    "section": "Ground",
-    "asset": "coinStar"
-  }},
+  "asset-table": {},
   "prefab-table": {}
 }

@@ -228,61 +228,81 @@
               {
                 "type": "prefab",
                 "prefab": "2",
-                "id": "dc5b8486-3989-4ad7-952d-33451fa210c7",
+                "id": "b1a4f716-9e96-4641-b478-146627263cd1",
                 "asset-ref": {
                   "file": "WebContent/assets/eviroment.json",
                   "section": "Ground",
-                  "asset": "coinStar"
+                  "asset": "AnimationAtlas",
+                  "sprite": "coin0000"
                 },
                 "info": {
-                  "editorName": "coinStar5",
-                  "x": 440,
-                  "y": 863
+                  "editorName": "coinStar",
+                  "x": 982,
+                  "y": 589
                 }
               },
               {
                 "type": "prefab",
                 "prefab": "2",
-                "id": "8626ef84-32ea-497c-a145-df8bddaf623f",
+                "id": "e767f462-5d74-42e5-9b8f-6822729c815d",
                 "asset-ref": {
                   "file": "WebContent/assets/eviroment.json",
                   "section": "Ground",
-                  "asset": "coinStar"
+                  "asset": "AnimationAtlas",
+                  "sprite": "coin0000"
                 },
                 "info": {
-                  "editorName": "coinStar5",
-                  "x": 535,
-                  "y": 272
+                  "editorName": "coinStar",
+                  "x": 34,
+                  "y": 415
                 }
               },
               {
                 "type": "prefab",
                 "prefab": "2",
-                "id": "052db9ef-de65-426a-b225-c27a4273abb2",
+                "id": "fed2d1d4-f9a5-4a06-b092-41ecf10e315b",
                 "asset-ref": {
                   "file": "WebContent/assets/eviroment.json",
                   "section": "Ground",
-                  "asset": "coinStar"
+                  "asset": "AnimationAtlas",
+                  "sprite": "coin0000"
                 },
                 "info": {
-                  "editorName": "coinStar5",
-                  "x": 1513,
-                  "y": 278
+                  "editorName": "coinStar",
+                  "x": 512,
+                  "y": 270
                 }
               },
               {
                 "type": "prefab",
                 "prefab": "2",
-                "id": "5612b7da-06f9-4b52-887e-2e47048ef28a",
+                "id": "dd5239d3-e70c-4644-9245-5d2f4d756367",
                 "asset-ref": {
                   "file": "WebContent/assets/eviroment.json",
                   "section": "Ground",
-                  "asset": "coinStar"
+                  "asset": "AnimationAtlas",
+                  "sprite": "coin0000"
                 },
                 "info": {
-                  "editorName": "coinStar5",
-                  "x": 104,
-                  "y": 103
+                  "editorName": "coinStar",
+                  "x": 1731,
+                  "y": 562
+                }
+              },
+              {
+                "type": "prefab",
+                "prefab": "2",
+                "id": "fe3313e6-15aa-469a-9a64-3be429264b28",
+                "asset-ref": {
+                  "file": "WebContent/assets/eviroment.json",
+                  "section": "Ground",
+                  "asset": "AnimationAtlas",
+                  "sprite": "coin0000"
+                },
+                "info": {
+                  "editorName": "coinStar",
+                  "x": 1495,
+                  "y": 288
                 }
               }
             ]
@@ -412,9 +432,10 @@
           "prefab": "5",
           "id": "fa97e99f-f958-4d94-88e0-08df9fe0b471",
           "asset-ref": {
-            "file": "WebContent/assets/pack.json",
-            "section": "player",
-            "asset": "player1"
+            "file": "WebContent/assets/eviroment.json",
+            "section": "Ground",
+            "asset": "AnimationAtlas",
+            "sprite": "player_idle0001"
           },
           "info": {
             "editorName": "player",
@@ -521,7 +542,7 @@
   "prefab-table": {
     "0": "WebContent/assets/sprites/Platform1.canvas",
     "1": "WebContent/assets/canvas/prefabs/Piso.canvas",
-    "2": "WebContent/assets/sprites/CoinStar.canvas",
+    "2": "WebContent/assets/canvas/prefabs/CoinStar.canvas",
     "3": "WebContent/assets/canvas/prefabs/Enemy.canvas",
     "4": "WebContent/assets/canvas/prefabs/Vida.canvas",
     "5": "WebContent/assets/canvas/prefabs/Player.canvas"
