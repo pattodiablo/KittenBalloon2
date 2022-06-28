@@ -147,6 +147,24 @@
       "textureURL": "assets/atlas/AnimationAtlas.png",
       "atlasURL": "assets/atlas/AnimationAtlas.xml",
       "format": "TEXTURE_ATLAS_XML_STARLING"
+    },
+    {
+      "type": "image",
+      "key": "baseMontain1",
+      "url": "assets/sprites/baseMontain1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "baseMontain2",
+      "url": "assets/sprites/baseMontain2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "yelloParticle",
+      "url": "assets/sprites/yelloParticle.png",
+      "overwrite": false
     }
   ],
   "BitmapFont": [
@@ -168,7 +186,7 @@
     }
   ],
   "meta": {
-    "generated": "1656349911392",
+    "generated": "1656427823066",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

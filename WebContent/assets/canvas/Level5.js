@@ -56,11 +56,28 @@ Level5.prototype.create = function () {
 	var _floor1 = new Piso(this.game, 0.0, 960.0);
 	_Plataformas.add(_floor1);
 	
-	var _platformTipo = new Platform1(this.game, 382.0, 655.0);
+	var _platformTipo = new Platform1(this.game, 1303.0, 575.0);
 	_Plataformas.add(_platformTipo);
 	
-	var _platformTipo2 = new Platform1(this.game, -177.0, 432.0);
+	var _platformTipo2 = new Platform1(this.game, 341.0, 434.0);
 	_Plataformas.add(_platformTipo2);
+	
+	var _platformTipo = new Platform1(this.game, -67.0, 178.0);
+	_Plataformas.add(_platformTipo);
+	
+	this.add.sprite(-20.0, 833.0, 'montain2', null, _Plataformas);
+	
+	this.add.sprite(244.0, 793.0, 'montain2', null, _Plataformas);
+	
+	this.add.sprite(493.0, 870.0, 'montain2', null, _Plataformas);
+	
+	this.add.sprite(747.0, 777.0, 'montain2', null, _Plataformas);
+	
+	this.add.sprite(1025.0, 850.0, 'montain2', null, _Plataformas);
+	
+	this.add.sprite(1172.0, 777.0, 'montain2', null, _Plataformas);
+	
+	this.add.sprite(1745.0, 818.0, 'montain2', null, _Plataformas);
 	
 	var _Coins = this.add.group();
 	
@@ -72,6 +89,32 @@ Level5.prototype.create = function () {
 	
 	var _coinStar2 = new CoinStar(this.game, 441.0, 111.0);
 	_Coins.add(_coinStar2);
+	
+	var _coinStar = new CoinStar(this.game, 633.0, 256.0);
+	_Coins.add(_coinStar);
+	
+	var _coinStar = new CoinStar(this.game, 1322.0, 359.0);
+	_Coins.add(_coinStar);
+	
+	var _coinStar = new CoinStar(this.game, 1438.0, 502.0);
+	_Coins.add(_coinStar);
+	
+	var _coinStar = new CoinStar(this.game, 1072.0, 723.0);
+	_Coins.add(_coinStar);
+	
+	var _coinStar = new CoinStar(this.game, 1567.0, 847.0);
+	_Coins.add(_coinStar);
+	
+	var _plataformasMove = this.add.group();
+	_plataformasMove.position.set(981.0, 283.0);
+	
+	this.add.sprite(-390.0, 53.0, 'platformTipo3', null, _plataformasMove);
+	
+	this.add.sprite(295.0, 143.0, 'platformTipo3', null, _plataformasMove);
+	
+	this.add.sprite(-54.0, -73.0, 'platformTipo3', null, _plataformasMove);
+	
+	this.add.sprite(-1000.0, 303.0, 'platformTipo3', null, _plataformasMove);
 	
 	var _Enemies = this.add.group();
 	
@@ -93,13 +136,22 @@ Level5.prototype.create = function () {
 	var _enemy = new Enemy(this.game, 514.0, 110.0);
 	_EnemyL3.add(_enemy);
 	
-	var _plataformasMove = this.add.group();
-	_plataformasMove.position.set(471.0, 267.0);
+	var _enemy = new Enemy3(this.game, 766.0, 595.0);
+	_EnemyL3.add(_enemy);
 	
-	var _platformTipo1 = new Platform1(this.game, -42.0, -86.0);
-	_plataformasMove.add(_platformTipo1);
+	var _enemy = new Enemy3(this.game, 1803.0, 83.0);
+	_EnemyL3.add(_enemy);
 	
-	var _player = new Player(this.game, 81.0, 882.0);
+	var _EnemyL2 = this.add.group();
+	_EnemyL2.position.set(829.0, 471.0);
+	
+	var _enemy = new Enemy2(this.game, 1236.0, 25.0);
+	_EnemyL2.add(_enemy);
+	
+	var _enemy = new Enemy2(this.game, 1184.0, 827.0);
+	_EnemyL2.add(_enemy);
+	
+	var _player = new Player(this.game, 116.0, 756.0);
 	this.add.existing(_player);
 	
 	var _greatJobScreen = this.add.sprite(0.0, -960.0, 'greatJobScreen');
@@ -122,17 +174,27 @@ Level5.prototype.create = function () {
 	this.fFloor1 = _floor1;
 	this.fPlatformTipo = _platformTipo;
 	this.fPlatformTipo2 = _platformTipo2;
+	this.fPlatformTipo = _platformTipo;
 	this.fCoins = _Coins;
 	this.fCoinStar = _coinStar;
 	this.fCoinStar1 = _coinStar1;
 	this.fCoinStar2 = _coinStar2;
+	this.fCoinStar = _coinStar;
+	this.fCoinStar = _coinStar;
+	this.fCoinStar = _coinStar;
+	this.fCoinStar = _coinStar;
+	this.fCoinStar = _coinStar;
+	this.fPlataformasMove = _plataformasMove;
 	this.fEnemies = _Enemies;
 	this.fEnemyL2 = _EnemyL2;
 	this.fLives = _lives;
 	this.fEnemyL3 = _EnemyL3;
 	this.fEnemy = _enemy;
-	this.fPlataformasMove = _plataformasMove;
-	this.fPlatformTipo1 = _platformTipo1;
+	this.fEnemy = _enemy;
+	this.fEnemy = _enemy;
+	this.fEnemyL2 = _EnemyL2;
+	this.fEnemy = _enemy;
+	this.fEnemy = _enemy;
 	this.fPlayer = _player;
 	this.fGreatJobScreen = _greatJobScreen;
 	this.fPauseBtn = _pauseBtn;

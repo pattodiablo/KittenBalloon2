@@ -39,8 +39,8 @@ Level3.prototype.init = function (vidas) {
 Level3.prototype.preload = function () {
 	
 	this.load.pack('Ground', 'assets/eviroment.json');
-	this.load.pack('player', 'assets/pack.json');
 	this.load.pack('Enemy', 'assets/enemy.json');
+	this.load.pack('player', 'assets/pack.json');
 	this.load.pack('BitmapFont', 'assets/eviroment.json');
 	
 	this.myPreload();
@@ -66,15 +66,29 @@ Level3.prototype.create = function () {
 	var _platformTipo2 = new Platform1(this.game, 387.0, 215.0);
 	_Plataformas.add(_platformTipo2);
 	
+	this.add.sprite(778.0, 651.0, 'baseMontain2', null, _Plataformas);
+	
 	this.add.sprite(322.0, 837.0, 'montain2', null, _Plataformas);
 	
 	this.add.sprite(552.0, 913.0, 'montain2', null, _Plataformas);
 	
-	this.add.sprite(777.0, 851.0, 'montain2', null, _Plataformas);
+	this.add.sprite(778.0, 598.0, 'montain2', null, _Plataformas);
 	
 	this.add.sprite(-84.0, 824.0, 'montain2', null, _Plataformas);
 	
 	this.add.sprite(-148.0, 639.0, 'montain2', null, _Plataformas);
+	
+	var _platformTipo2 = new Platform1(this.game, 1404.0, 741.0);
+	_Plataformas.add(_platformTipo2);
+	
+	var _montain = this.add.sprite(1637.0, 144.0, 'montain2', null, _Plataformas);
+	_montain.scale.set(1.0, -1.0);
+	
+	var _montain = this.add.sprite(1356.0, 77.0, 'montain2', null, _Plataformas);
+	_montain.scale.set(1.0, -1.0);
+	
+	var _montain = this.add.sprite(869.0, 75.0, 'montain2', null, _Plataformas);
+	_montain.scale.set(1.0, -1.0);
 	
 	var _Coins = this.add.group();
 	
@@ -87,9 +101,24 @@ Level3.prototype.create = function () {
 	var _coinStar2 = new CoinStar(this.game, 379.0, 118.0);
 	_Coins.add(_coinStar2);
 	
+	var _coinStar = new CoinStar(this.game, 1413.0, 293.0);
+	_Coins.add(_coinStar);
+	
+	var _coinStar2 = new CoinStar(this.game, 1518.0, 601.0);
+	_Coins.add(_coinStar2);
+	
+	var _coinStar2 = new CoinStar(this.game, 1801.0, 819.0);
+	_Coins.add(_coinStar2);
+	
 	var _Enemies = this.add.group();
 	
 	var _EnemyL2 = this.add.group();
+	
+	var _enemy = new Enemy2(this.game, 1236.0, 25.0);
+	_EnemyL2.add(_enemy);
+	
+	var _enemy = new Enemy2(this.game, 1184.0, 827.0);
+	_EnemyL2.add(_enemy);
 	
 	var _lives = this.add.group();
 	
@@ -107,10 +136,17 @@ Level3.prototype.create = function () {
 	var _enemy = new Enemy(this.game, -6.0, 138.0);
 	_EnemyL3.add(_enemy);
 	
+	var _enemy = new Enemy(this.game, 510.0, 110.0);
+	_EnemyL3.add(_enemy);
+	
 	var _plataformasMove = this.add.group();
 	_plataformasMove.position.set(471.0, 267.0);
 	
 	this.add.sprite(-380.0, 230.0, 'platformTipo3', null, _plataformasMove);
+	
+	this.add.sprite(909.0, 141.0, 'platformTipo3', null, _plataformasMove);
+	
+	this.add.sprite(546.0, -11.0, 'platformTipo3', null, _plataformasMove);
 	
 	var _player = new Player(this.game, 42.0, 583.0);
 	this.add.existing(_player);
@@ -136,14 +172,21 @@ Level3.prototype.create = function () {
 	this.fPlatformTipo = _platformTipo;
 	this.fPlatformTipo1 = _platformTipo1;
 	this.fPlatformTipo2 = _platformTipo2;
+	this.fPlatformTipo2 = _platformTipo2;
 	this.fCoins = _Coins;
 	this.fCoinStar = _coinStar;
 	this.fCoinStar1 = _coinStar1;
 	this.fCoinStar2 = _coinStar2;
+	this.fCoinStar = _coinStar;
+	this.fCoinStar2 = _coinStar2;
+	this.fCoinStar2 = _coinStar2;
 	this.fEnemies = _Enemies;
 	this.fEnemyL2 = _EnemyL2;
+	this.fEnemy = _enemy;
+	this.fEnemy = _enemy;
 	this.fLives = _lives;
 	this.fEnemyL3 = _EnemyL3;
+	this.fEnemy = _enemy;
 	this.fEnemy = _enemy;
 	this.fPlataformasMove = _plataformasMove;
 	this.fPlayer = _player;

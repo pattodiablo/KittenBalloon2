@@ -65,6 +65,16 @@ Level13.prototype.create = function () {
 	var _platformTipo = new Platform1(this.game, 479.0, 869.0);
 	_Plataformas.add(_platformTipo);
 	
+	this.add.sprite(975.0, 638.0, 'platformTipo1', null, _Plataformas);
+	
+	this.add.sprite(772.0, 334.0, 'platformTipo1', null, _Plataformas);
+	
+	this.add.sprite(1563.0, 383.0, 'platformTipo1', null, _Plataformas);
+	
+	this.add.sprite(1585.0, 678.0, 'platformTipo1', null, _Plataformas);
+	
+	this.add.sprite(1204.0, 104.0, 'platformTipo1', null, _Plataformas);
+	
 	var _Coins = this.add.group();
 	
 	var _coinStar = new CoinStar(this.game, 504.0, 524.0);
@@ -79,9 +89,33 @@ Level13.prototype.create = function () {
 	var _coinStar3 = new CoinStar(this.game, 208.0, 116.0);
 	_Coins.add(_coinStar3);
 	
+	var _coinStar1 = new CoinStar(this.game, 1065.0, 553.0);
+	_Coins.add(_coinStar1);
+	
+	var _coinStar1 = new CoinStar(this.game, 15.0, 328.0);
+	_Coins.add(_coinStar1);
+	
+	var _coinStar1 = new CoinStar(this.game, 871.0, 231.0);
+	_Coins.add(_coinStar1);
+	
+	var _coinStar1 = new CoinStar(this.game, 1667.0, 258.0);
+	_Coins.add(_coinStar1);
+	
+	var _coinStar1 = new CoinStar(this.game, 1699.0, 577.0);
+	_Coins.add(_coinStar1);
+	
 	var _Enemies = this.add.group();
 	
 	var _enemy = new Enemy3(this.game, 502.0, 132.0);
+	_Enemies.add(_enemy);
+	
+	var _enemy = new Enemy3(this.game, 642.0, 731.0);
+	_Enemies.add(_enemy);
+	
+	var _enemy = new Enemy3(this.game, 1276.0, 17.0);
+	_Enemies.add(_enemy);
+	
+	var _enemy = new Enemy3(this.game, 1406.0, 786.0);
 	_Enemies.add(_enemy);
 	
 	var _EnemyL2 = this.add.group();
@@ -100,6 +134,12 @@ Level13.prototype.create = function () {
 	var _EnemyL3 = this.add.group();
 	
 	var _enemy1 = new Enemy(this.game, 197.0, 112.0);
+	_EnemyL3.add(_enemy1);
+	
+	var _enemy1 = new Enemy(this.game, 806.0, 211.0);
+	_EnemyL3.add(_enemy1);
+	
+	var _enemy1 = new Enemy(this.game, 1720.0, 243.0);
 	_EnemyL3.add(_enemy1);
 	
 	var _plataformasMove = this.add.group();
@@ -136,11 +176,21 @@ Level13.prototype.create = function () {
 	this.fCoinStar1 = _coinStar1;
 	this.fCoinStar2 = _coinStar2;
 	this.fCoinStar3 = _coinStar3;
+	this.fCoinStar1 = _coinStar1;
+	this.fCoinStar1 = _coinStar1;
+	this.fCoinStar1 = _coinStar1;
+	this.fCoinStar1 = _coinStar1;
+	this.fCoinStar1 = _coinStar1;
 	this.fEnemies = _Enemies;
+	this.fEnemy = _enemy;
+	this.fEnemy = _enemy;
+	this.fEnemy = _enemy;
 	this.fEnemy = _enemy;
 	this.fEnemyL2 = _EnemyL2;
 	this.fLives = _lives;
 	this.fEnemyL3 = _EnemyL3;
+	this.fEnemy1 = _enemy1;
+	this.fEnemy1 = _enemy1;
 	this.fEnemy1 = _enemy1;
 	this.fPlataformasMove = _plataformasMove;
 	this.fPlayer = _player;

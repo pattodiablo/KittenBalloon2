@@ -2,7 +2,24 @@
 	function PlatformerBehavior(state, nextLevel,levelScreen, player, plataformas,platafmove, enemigos, enemigos2, enemigos3, coins, vidas, corazones, winScreen, pausebtn, sounds) {
 	// init
 		
+	emitter = state.add.emitter(state.world.centerX, 0, 100);
+
+    emitter.makeParticles('yelloParticle');
+
+    emitter.minParticleSpeed.setTo(0, -30);
+	emitter.setAlpha(0, 0.5);
+    emitter.maxParticleSpeed.setTo(0, 30);
+    emitter.minParticleScale = 0.1;
+    emitter.maxParticleScale = 1;
+    emitter.gravity = -200;
+	emitter.depth=-1;
 	
+	emitter.width=1920;
+	emitter.height=960;
+    //  This will emit a quantity of 5 particles every 500ms. Each particle will live for 2000ms.
+    //  The -1 means "run forever"
+	//emitter.flow(2000, 500, 5, -1);
+	emitter.start(false, 5000, 100);
 	
 	//	this._sounds.play('coin');
 		this._state = state;
@@ -29,6 +46,8 @@
 	// player
 		this._player = player;
 		this._player.sounds = sounds;
+
+		
 		
 		this._plataformas= plataformas;
 		this._platafmove = platafmove;
@@ -109,6 +128,7 @@
 		this._velocity = this._player.body.velocity;
 		this._velocity.y = 0;
 		this._state.physics.arcade.enable(this._player);
+		this._player.body.gravity.y = 350;
 
 	//coins
 
@@ -578,7 +598,7 @@
 			
 		}
 	PlatformerBehavior.prototype.update = function() {
-
+		emitter.x=this._state.camera.x;
 		this._levelScreen.x=this._state.camera.x;
 		this._winScreen.x=this._state.camera.x;
 		
@@ -604,7 +624,7 @@
 	    {
 	    	if(this._canFly){
 
-	    		  this._velocity.y = -150;
+	    		  this._velocity.y = -200;
 	    	}
 	    
 	    }
