@@ -47,7 +47,7 @@ Level15.prototype.preload = function () {
 };
 
 Level15.prototype.create = function () {
-	var _background = this.add.tileSprite(7.0, -11.0, 640.0, 960.0, 'background', null);
+	var _background = this.add.tileSprite(0.0, -11.0, 640.0, 960.0, 'background', null);
 	
 	var _grass = this.add.sprite(0.0, 807.0, 'grass');
 	
