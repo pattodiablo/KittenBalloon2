@@ -185,7 +185,7 @@ Level.prototype.myPreload = function () {
 };
 
 Level.prototype.myInit = function () {
-	this.LevelNumber = 1;
+	this.LevelNumber = "Easy Peacy";
 	this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 	this.game.sound.boot();
 };

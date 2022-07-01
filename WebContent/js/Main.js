@@ -1,12 +1,12 @@
 window.onload = function() {
 	
 		//var Pixelratio = window.screen.availWidth / 640;
-	  var width =  640;﻿﻿﻿
+	  var width =  640;
 	  var height = 960;
 
 	
 	  
-	var game = new Phaser.Game(width,height, Phaser.AUTO);
+	var game = new Phaser.Game(width,height, Phaser.AUTO, gato);
 
 	// Add the States your game has.
 	

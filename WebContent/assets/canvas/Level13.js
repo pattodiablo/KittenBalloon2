@@ -26,7 +26,7 @@ Level13.prototype.init = function (vidas) {
 	
 	console.log(vidas);
 	vidasTotales = vidas;
-		this.LevelNumber = 13;
+		this.LevelNumber = "Razor gore";
 	
 	this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 	this.scale.pageAlignHorizontally = true;

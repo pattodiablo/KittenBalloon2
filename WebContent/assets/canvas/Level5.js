@@ -26,7 +26,7 @@ Level5.prototype.init = function (vidas) {
 	
 	console.log(vidas);
 	vidasTotales = vidas;
-		this.LevelNumber = 5;
+		this.LevelNumber = "Thunder wonder";
 	
 	this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 	this.scale.pageAlignHorizontally = true;

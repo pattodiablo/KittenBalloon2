@@ -26,7 +26,7 @@ Level15.prototype.init = function (vidas) {
 	
 	console.log(vidas);
 	vidasTotales = vidas;
-		this.LevelNumber = 15;
+		this.LevelNumber = "Double throttle";
 	
 	this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 	this.scale.pageAlignHorizontally = true;

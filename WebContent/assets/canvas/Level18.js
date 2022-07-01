@@ -26,7 +26,7 @@ Level18.prototype.init = function (vidas) {
 	
 	console.log(vidas);
 	vidasTotales = vidas;
-		this.LevelNumber = 18;
+		this.LevelNumber = "Almost frosty";
 	
 	this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 	this.scale.pageAlignHorizontally = true;

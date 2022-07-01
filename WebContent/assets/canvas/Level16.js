@@ -26,7 +26,7 @@ Level16.prototype.init = function (vidas) {
 	
 	console.log(vidas);
 	vidasTotales = vidas;
-		this.LevelNumber = 16;
+		this.LevelNumber = "Spin danger";
 	
 	this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 	this.scale.pageAlignHorizontally = true;

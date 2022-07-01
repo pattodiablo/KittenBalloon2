@@ -27,7 +27,7 @@ Level6.prototype.init = function (vidas) {
 	console.log(vidas);
 	vidasTotales = vidas;
 	
-		this.LevelNumber = 6;
+		this.LevelNumber = "Going under";
 	
 	this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 	this.scale.pageAlignHorizontally = true;

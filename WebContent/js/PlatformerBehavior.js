@@ -72,7 +72,10 @@
 		this._state.fBackground.width=this._state.world.width;
 		this._state.fFloor1.width=this._state.world.width;
 		this._state.fGrass.width=this._state.world.width;
-		
+		this._state.fPixelFont.fontSize=50;
+	
+		this._state.fPixelFont.x=290;
+		this._state.fPixelFont.y=-450;
 
 		
 		console.log();
@@ -501,13 +504,13 @@
 		console.log(this._state.camera.x)
 	
 
-  		this._state.add.tween(this._levelScreen).to({ y:960 ﻿},500, Phaser.Easing.Bounce.Out, true);
+  		this._state.add.tween(this._levelScreen).to({ y:960},500, Phaser.Easing.Bounce.Out, true);
 		
 		this._state.time.events.loop(1500, upScreen, this );
 		
 		function upScreen(){
 
-			this._state.add.tween(this._levelScreen).to({ y: 0 ﻿},500, Phaser.Easing.Bounce.Out, true);
+			this._state.add.tween(this._levelScreen).to({ y: 0 },500, Phaser.Easing.Bounce.Out, true);
 		
 		}
 		
@@ -521,7 +524,7 @@
 		
 
 			this._player.sounds.finLevel.play("finLevel",0, 0.5, false, true);
-			this._state.add.tween(this._winScreen).to({ y: 0 ﻿},500, Phaser.Easing.Bounce.Out, true);
+			this._state.add.tween(this._winScreen).to({ y: -960 },500, Phaser.Easing.Bounce.Out, true);
 			this._state.time.events.add(1700, doGameOver, this );
 			
 			function doGameOver(){

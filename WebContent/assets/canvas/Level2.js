@@ -200,7 +200,7 @@ Level2.prototype.myPreload = function () {
 };
 
 Level2.prototype.myInit = function () {
-	this.LevelNumber = 2;
+	this.LevelNumber = "OMG battle";
 	this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 	this.game.sound.boot();
 };
