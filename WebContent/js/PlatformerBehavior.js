@@ -1,7 +1,7 @@
 
 	function PlatformerBehavior(state, nextLevel,levelScreen, player, plataformas,platafmove, enemigos, enemigos2, enemigos3, coins, vidas, corazones, winScreen, pausebtn, sounds) {
 	// init
-		
+	vidas=0;
 	emitter = state.add.emitter(state.world.centerX, 0, 100);
 
     emitter.makeParticles('yelloParticle');
