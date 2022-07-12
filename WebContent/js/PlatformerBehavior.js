@@ -76,7 +76,7 @@
 	
 		this._state.fPixelFont.x=290;
 		this._state.fPixelFont.y=-450;
-
+		this.canAnimateFly = true;	
 		
 		console.log();
 		
@@ -344,6 +344,7 @@
 				enemy.body.velocity.x=this.enemyPowerX*this.enemyDir;
 				enemy.body.velocity.y=-this.enemyPowerY;
 
+				
 		
 
 			}
@@ -526,8 +527,19 @@
 			this._player.sounds.finLevel.play("finLevel",0, 0.5, false, true);
 			this._state.add.tween(this._winScreen).to({ y: -960 },500, Phaser.Easing.Bounce.Out, true);
 			this._state.time.events.add(1700, doGameOver, this );
+			this.timerVar.loop=false;
+			this.timerVar.timer.stop=true;
 			
+			this._player.body.enable=false;
+			
+		
+		//	this._state.add.tween(this._player).to({ y: this._player+20 },300, Phaser.Easing.Linear.None, true);
+			this.finalAnimation = this._state.add.tween(this._player.scale).to({ x: 1.1,y:1.1 },1000,  Phaser.Easing.Linear.None, true,100,-1);
+		
+			this.finalAnimation.yoyo(true, 200);
+
 			function doGameOver(){
+			
 				Rune.gameOver();
 			}
 		
@@ -566,7 +578,7 @@
 	
 			
 	
-		   this._state.time.events.loop(1000, function(){
+		  this.timerVar = this._state.time.events.loop(1000, function(){
 		    	this.initialTime++;
 		    	this.elapsedTimer = this.formatTime(this.initialTime);
 		       	this.fTimerText.text=this.elapsedTimer;
@@ -619,7 +631,8 @@
 		this._arcade.collide(this._platafmove, this._coins, bounceAbit);
 		this._arcade.collide(this._plataformas, this._coins, bounceAbit);
 
-		this._platafmove.forEach(this.updatePlatform, this);		
+		this._platafmove.forEach(this.updatePlatform, this);	
+	
 
 		if(this._playing ){
 
@@ -628,6 +641,20 @@
 	    	if(this._canFly){
 
 	    		  this._velocity.y = -200;
+				  console.log(this.canAnimateFly)
+				  if(this.canAnimateFly){
+					this.flyAnim = this._state.add.tween(this._player.scale).to({ x: 1.05,y:1.05 },100,  Phaser.Easing.Linear.None, true,100,0);
+					console.log("animateFly")
+				 	this.flyAnim.yoyo(true, 50);
+					 this.flyAnim.onComplete.add(function(){
+
+						this.canAnimateFly=true;
+					 }
+					 , this);
+					this.canAnimateFly=false;
+				
+				  }
+				  
 	    	}
 	    
 	    }
