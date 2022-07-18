@@ -41,14 +41,15 @@ window.onload = function() {
 	}
 	
 	game.getScore=function(){
+		var toReturn=0;
 		if(game.state.getCurrentState()!=undefined){
 				
-			return game.state.getCurrentState().fPlayer.data.score;
+			toReturn= game.state.getCurrentState().fPlayer.data.score;
 		}else{
-			return 0;
+			toReturn= 0;
 		}
 		
-		
+		return toReturn;
 	}
 
 

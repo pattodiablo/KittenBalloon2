@@ -212,7 +212,7 @@
                 },
                 "info": {
                   "editorName": "coinStar",
-                  "x": 387,
+                  "x": 330,
                   "y": 573
                 }
               },
@@ -228,8 +228,8 @@
                 },
                 "info": {
                   "editorName": "coinStar1",
-                  "x": 348,
-                  "y": 150
+                  "x": 461,
+                  "y": 126
                 }
               },
               {
@@ -325,7 +325,7 @@
                 "info": {
                   "editorName": "coinStar",
                   "x": 1272,
-                  "y": 360
+                  "y": 393
                 }
               },
               {
@@ -341,7 +341,7 @@
                 "info": {
                   "editorName": "coinStar",
                   "x": 1202,
-                  "y": 642
+                  "y": 677
                 }
               },
               {
@@ -373,7 +373,7 @@
                 "info": {
                   "editorName": "coinStar",
                   "x": 1686,
-                  "y": 625
+                  "y": 649
                 }
               }
             ]
@@ -633,8 +633,8 @@
                 "asset": "3",
                 "info": {
                   "editorName": "platformTipo5",
-                  "x": -126,
-                  "y": 373
+                  "x": -186,
+                  "y": 380
                 }
               }
             ]

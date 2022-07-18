@@ -53,6 +53,7 @@
 		this._platafmove = platafmove;
 		this._coins = coins;
 		this.isblinking=false;
+		this.coinsCollected=0;
 		
 
 		this._corazones = corazones;
@@ -139,7 +140,7 @@
 		this._arcade.enable(this._coins, true);
 		this._coins.setAll("body.allowGravity", true);
 		this._coins.setAll("body.immovable", false);
-		this._coins.setAll("body.collideWorldBounds", false);
+		this._coins.setAll("body.collideWorldBounds", true);
 		
 	//enemigos1	
 		
@@ -502,7 +503,7 @@
 			
 		this.winerScreen.addOnce(this.winScreen, this);
 		
-		console.log(this._state.camera.x)
+	
 	
 
   		this._state.add.tween(this._levelScreen).to({ y:960},500, Phaser.Easing.Bounce.Out, true);
@@ -582,6 +583,7 @@
 		    	this.initialTime++;
 		    	this.elapsedTimer = this.formatTime(this.initialTime);
 		       	this.fTimerText.text=this.elapsedTimer;
+				 //  console.log(this.initialTime)
 		    }, this );
 		
 		}
@@ -590,21 +592,26 @@
 	
 		PlatformerBehavior.prototype.coining=function(player, coin){
 			
-		
+			
 
+			console.log("getting score")
+			player.game.state.getCurrentState().behavior.coinsCollected++;
+			var coinsCollected=player.game.state.getCurrentState().behavior.coinsCollected;
+			
+			console.log("coinsCollected " + coinsCollected);
+			
 				player.sounds.fxCoin.play("coin");
 				coin.visible = false;
 				
-				var currentScore = player.data.score;
-				currentScore+=100;
+			
 				
-				var newScore=currentScore-player.game.state.getCurrentState().behavior.initialTime;
+				var newScore=(coinsCollected*100)-player.game.state.getCurrentState().behavior.initialTime;
 				if(newScore<=0){
 					newScore=0;
 				}
-				
-				coin.destroy();
 				console.log(newScore);
+				coin.destroy();
+				
 				player.data.score=newScore;
 				return newScore;
 				
@@ -641,10 +648,10 @@
 	    	if(this._canFly){
 
 	    		  this._velocity.y = -200;
-				  console.log(this.canAnimateFly)
+				 // console.log(this.canAnimateFly)
 				  if(this.canAnimateFly){
 					this.flyAnim = this._state.add.tween(this._player.scale).to({ x: 1.05,y:1.05 },100,  Phaser.Easing.Linear.None, true,100,0);
-					console.log("animateFly")
+				//	console.log("animateFly")
 				 	this.flyAnim.yoyo(true, 50);
 					 this.flyAnim.onComplete.add(function(){
 

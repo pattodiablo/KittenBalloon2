@@ -27,7 +27,7 @@ Level9.prototype.init = function (vidas) {
 	console.log(vidas);
 	vidasTotales = vidas;
 	
-		this.LevelNumber = "Vivid Wendy";
+		this.LevelNumber = "Weird Wendy";
 	
 	this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 	this.scale.pageAlignHorizontally = true;
@@ -79,10 +79,10 @@ Level9.prototype.create = function () {
 	
 	var _Coins = this.add.group();
 	
-	var _coinStar = new CoinStar(this.game, 387.0, 573.0);
+	var _coinStar = new CoinStar(this.game, 330.0, 573.0);
 	_Coins.add(_coinStar);
 	
-	var _coinStar1 = new CoinStar(this.game, 348.0, 150.0);
+	var _coinStar1 = new CoinStar(this.game, 461.0, 126.0);
 	_Coins.add(_coinStar1);
 	
 	var _coinStar2 = new CoinStar(this.game, 42.0, 285.0);
@@ -100,16 +100,16 @@ Level9.prototype.create = function () {
 	var _coinStar = new CoinStar(this.game, 886.0, 334.0);
 	_Coins.add(_coinStar);
 	
-	var _coinStar = new CoinStar(this.game, 1272.0, 360.0);
+	var _coinStar = new CoinStar(this.game, 1272.0, 393.0);
 	_Coins.add(_coinStar);
 	
-	var _coinStar = new CoinStar(this.game, 1202.0, 642.0);
+	var _coinStar = new CoinStar(this.game, 1202.0, 677.0);
 	_Coins.add(_coinStar);
 	
 	var _coinStar = new CoinStar(this.game, 966.0, 100.0);
 	_Coins.add(_coinStar);
 	
-	var _coinStar = new CoinStar(this.game, 1686.0, 625.0);
+	var _coinStar = new CoinStar(this.game, 1686.0, 649.0);
 	_Coins.add(_coinStar);
 	
 	var _Enemies = this.add.group();
@@ -162,7 +162,7 @@ Level9.prototype.create = function () {
 	var _platformTipo4 = new Platform1(this.game, -129.0, -53.0);
 	_plataformasMove.add(_platformTipo4);
 	
-	this.add.sprite(-126.0, 373.0, 'platformTipo3', null, _plataformasMove);
+	this.add.sprite(-186.0, 380.0, 'platformTipo3', null, _plataformasMove);
 	
 	var _player = new Player(this.game, 81.0, 882.0);
 	this.add.existing(_player);

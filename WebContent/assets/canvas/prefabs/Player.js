@@ -23,7 +23,7 @@ function Player(aGame, aX, aY, aKey, aFrame) {
 	this.animations.add('lookRight', ['player_right0000'], 60, false);
 	this.animations.add('blink', ['player_blink0000', 'player_blink0001'], 12, false);
 	_anim_idle.play();
-	this.data = 	this.data = {game:this.game.state﻿.getCurrentState(),score:0};
+	this.data = {game:this.game.state.getCurrentState(),score:0};
 	
 	// fields
 	
