@@ -15,10 +15,10 @@ window.onload = function() {
 	
 
 	
-	const mapIds = [1,2, 3, 4, 5, 6, 7,8,9,10,11,12,13,14,15,16,17,18,19,20] // Define your fixed list of maps
+	//const mapIds = [1,2, 3, 4, 5, 6, 7,8,9,10,11,12,13,14,15,16,17,18,19,20,21] // Define your fixed list of maps
 
-	var challengeNumber = Rune.getChallengeNumber(); // Get today's challenge number
-	
+	var challengeNumber = Rune.getChallengeNumber()%20; // Get today's challenge number
+	console.log("challengeNumber" + challengeNumber);
 	//const mapId = mapIds[challengeNumber % mapIds.length] // Get deterministic mapId
 
 	
@@ -55,6 +55,10 @@ window.onload = function() {
 
 		
 		switch(challengeNumber){
+			case 0:
+				game.state.add("Level21", Level21);
+				var wichLevel="Level21";
+			break;
 			case 1:
 				game.state.add("Level", Level);
 				var wichLevel="Level";
@@ -134,10 +138,6 @@ window.onload = function() {
 			case 20:
 				game.state.add("Level20", Level20);
 				var wichLevel="Level20";
-			break;
-			case 21:
-				game.state.add("Level21", Level21);
-				var wichLevel="Level21";
 			break;
 			default:
 				game.state.add("Level", Level);
