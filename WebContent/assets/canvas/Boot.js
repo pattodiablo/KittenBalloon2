@@ -54,19 +54,19 @@ Boot.prototype.myPreload = function () {
 
 	
 	
-	//this.add.sprite(0.0, 0.0, 'background');
-	//this.add.sprite(160.0, 416.0, 'loadingTitle');
-	//this.add.sprite(128.0, 544.0, 'backLoad');
+	this.add.sprite(0.0, 0.0, 'background');
+	this.add.sprite(160.0, 416.0, 'loadingTitle');
+this.add.sprite(128.0, 544.0, 'backLoad');
 
-	//var progressBar = this.add.sprite(128.0, 544.0, 'progressBar');
-	//this.load.setPreloadSprite(progressBar); 
+	var progressBar = this.add.sprite(128.0, 544.0, 'progressBar');
+	this.load.setPreloadSprite(progressBar); 
 
 	
 };
 
 Boot.prototype.loadStart = function () {
 
-	//this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;	
+	this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;	
 	
 	
 };

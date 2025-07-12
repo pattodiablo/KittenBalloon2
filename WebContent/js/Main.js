@@ -17,8 +17,8 @@ window.onload = function() {
 	
 	//const mapIds = [1,2, 3, 4, 5, 6, 7,8,9,10,11,12,13,14,15,16,17,18,19,20,21] // Define your fixed list of maps
 
-	var challengeNumber = Rune.getChallengeNumber()%20; // Get today's challenge number
-	console.log("challengeNumber" + challengeNumber);
+	var challengeNumber = 1; // Get today's challenge number
+
 	//const mapId = mapIds[challengeNumber % mapIds.length] // Get deterministic mapId
 
 	
@@ -158,14 +158,7 @@ window.onload = function() {
 	
 	
 
-		  
-	 Rune.init({
-			
-			restartGame:game.restartGame,
-			pauseGame:game.pauseGame,
-			resumeGame:game.resumeGame,
-			getScore:game.getScore,
-		  })
+
 		  
 		  
 };	

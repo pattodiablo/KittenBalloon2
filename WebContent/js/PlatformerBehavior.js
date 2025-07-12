@@ -23,6 +23,8 @@
 	
 	//	this._sounds.play('coin');
 		this._state = state;
+		console.log("currentLevel " + state.state.getCurrentState().key);
+		console.log("nextLevel " + nextLevel);
 		this._nextLevel = nextLevel;
 		this._vidas = vidas;
 		this._winScreen = winScreen;
@@ -198,10 +200,10 @@
 		
 		}else{
 
-			Rune.gameOver();
+			//Rune.gameOver();
 	
 
-		//this._state.game.state.start("GoverScene",true, true, this._state.state.getCurrentState().LevelNumber); //pantalla de game over
+		this._state.game.state.start("GoverScene",true, true, this._state.state.getCurrentState().LevelNumber); //pantalla de game over
 
 		}		
 
@@ -540,8 +542,7 @@
 			this.finalAnimation.yoyo(true, 200);
 
 			function doGameOver(){
-			
-				Rune.gameOver();
+					this._state.add.tween(this._winScreen).to({ y: 0 },500, Phaser.Easing.Bounce.Out, true);
 			}
 		
 		
@@ -556,9 +557,12 @@
 
 	PlatformerBehavior.prototype.NextLevel = function() {
 
-		//this._player.game.camera.fade(0x000000, 200);
-
-		//this._state.game.state.start(this._nextLevel, true, true, this._vidas);
+		    window.nextSceneKey = this._nextLevel;
+		this._player.game.camera.fade(0x000000, 200);
+		console.log("will load " + this._nextLevel);	
+	// Supón que window.Level2 es el constructor de la escena "Level2"
+this._state.game.state.add(this._nextLevel, window[this._nextLevel]);
+		this._state.game.state.start(this._nextLevel, true, true, this._vidas);
 		
 
 		};
@@ -707,7 +711,7 @@
 			this.winerScreen.dispatch();
 			this._playing = false;
 		
-			//this._state.time.events.loop(3000, this.NextLevel, this );
+			this._state.time.events.loop(3000, this.NextLevel, this );
 			
 
 		}
@@ -746,7 +750,6 @@
 		
 		if(this._velocity.x>0.5){
 		
-				
 			this._state.fPlayer.animations.play("lookRight");
 			this._state.fPlayer.rotation=0.1;		
 		}
