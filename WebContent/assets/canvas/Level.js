@@ -79,6 +79,7 @@ Level.prototype.create = function () {
 	var _montain = this.add.sprite(774.0, 140.0, 'montain1', null, _Plataformas);
 	_montain.scale.set(1.0, -1.0);
 	
+
 	var _plataformasMove = this.add.group();
 	_plataformasMove.position.set(-37.0, -199.0);
 	
@@ -141,8 +142,31 @@ Level.prototype.create = function () {
 	
 	var _PixelFont = this.add.bitmapText(900, -this.game.height+300, 'PixelFont', '1', 80, _ScreenLevel);
 	
+	var _BtnQuestion = this.add.sprite(10.0, 20.0, 'BtnQuestion');
+	_BtnQuestion.fixedToCamera = true;
 	
+	var HelpWindowgroup = this.add.group();
+	var _HelpWindow = this.add.sprite(10.0, 20.0, 'HelpWindow', null, HelpWindowgroup);
+	_HelpWindow.fixedToCamera = true;
+	var _BtnClose = this.add.sprite(25.0, 35.0, 'BtnClose', null, HelpWindowgroup);
+	_BtnClose.fixedToCamera = true;
+
+	HelpWindowgroup.visible = false;
+
+	_BtnQuestion.inputEnabled = true;
+	_BtnQuestion.events.onInputDown.add(function() {
+		HelpWindowgroup.visible = true;
+		this.world.bringToTop(HelpWindowgroup); // Asegura que esté al frente
+		this.game.paused = true; // Pausa el juego
+	}, this);
+
+	_BtnClose.inputEnabled = true;
+	_BtnClose.events.onInputDown.add(function() {
+		this.game.paused = false; // Quita el pause
+		HelpWindowgroup.visible = false;
 	
+	}, this);
+
 	// fields
 	
 	this.fBackground = _background;

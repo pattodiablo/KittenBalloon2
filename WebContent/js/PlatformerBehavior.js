@@ -13,8 +13,13 @@ function PlatformerBehavior(state, nextLevel,levelScreen, player, plataformas,pl
     emitter.gravity = -200;
 	emitter.depth=-1;
 	
-	emitter.width=1920;
-	emitter.height=960;
+	emitter.width=1031;
+	emitter.height=580;
+
+
+
+
+
     //  This will emit a quantity of 5 particles every 500ms. Each particle will live for 2000ms.
     //  The -1 means "run forever"
 	//emitter.flow(2000, 500, 5, -1);

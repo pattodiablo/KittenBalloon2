@@ -18,6 +18,24 @@
       "overwrite": false
     },
     {
+      "type": "image",
+      "key": "HelpWindow",
+      "url": "assets/sprites/HelpWindow.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "BtnClose",
+      "url": "assets/sprites/BtnClose.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "BtnQuestion",
+      "url": "assets/sprites/BtnQuestion.png",
+      "overwrite": false
+    },
+    {
       "type": "script",
       "key": "Vida",
       "url": "assets/canvas/prefabs/Vida.js"

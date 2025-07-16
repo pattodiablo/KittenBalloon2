@@ -167,6 +167,7 @@
       "overwrite": false
     }
   ],
+  
   "BitmapFont": [
     {
       "type": "bitmapFont",

@@ -54,7 +54,7 @@ window.onload = function() {
 
 
 		
-		switch(1){
+		switch(challengeNumber){
 			case 0:
 				game.state.add("Level21", Level21);
 				var wichLevel="Level21";
