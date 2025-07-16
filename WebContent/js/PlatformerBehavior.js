@@ -1,5 +1,4 @@
-
-	function PlatformerBehavior(state, nextLevel,levelScreen, player, plataformas,platafmove, enemigos, enemigos2, enemigos3, coins, vidas, corazones, winScreen, pausebtn, sounds) {
+function PlatformerBehavior(state, nextLevel,levelScreen, player, plataformas,platafmove, enemigos, enemigos2, enemigos3, coins, vidas, corazones, winScreen, pausebtn, sounds) {
 	// init
 	vidas=0;
 	emitter = state.add.emitter(state.world.centerX, 0, 100);
@@ -33,10 +32,13 @@
 		this._firstime = true;
 		this._levelScreen = levelScreen;
 
+		this._levelScreen.y = -state.game.height;
+
 		this.elapsedTimer = 0;
 		this.initialTime= 0
 		
-		var _timerText = state.add.bitmapText(530.0, 16.0, 'PixelFont', '0:00', 64);
+		var _timerText = state.add.bitmapText(911, 16.0, 'PixelFont', '0:00', 64);
+		console.log("Timer creado en nivel:", state.state.getCurrentState().key, _timerText);
 		_timerText.align = 'center';
 		this.fTimerText = _timerText;
 		this.fTimerText.fixedToCamera = true;
@@ -67,7 +69,7 @@
 		this._state.world.setBounds(0, 0, 1920, 960);
 		this._state.camera.follow(this._player);
 		this._state.camera.onFadeComplete.add(this.resetLevel, this);
-		this._state.game.paused = true;
+		this._state.game.paused = false;
 		this._pauseBtn = pausebtn;
 		this._pauseBtn.inputEnabled = true;
 		this._pauseBtn.visible = false;
@@ -77,8 +79,8 @@
 		this._state.fGrass.width=this._state.world.width;
 		this._state.fPixelFont.fontSize=50;
 	
-		this._state.fPixelFont.x=290;
-		this._state.fPixelFont.y=-450;
+		this._state.fPixelFont.x=490;
+		this._state.fPixelFont.y=-250;
 		this.canAnimateFly = true;	
 		
 		console.log();
@@ -504,20 +506,22 @@
   		this.winerScreen = new Phaser.Signal();
 			
 		this.winerScreen.addOnce(this.winScreen, this);
-		
-	
-	
 
-  		this._state.add.tween(this._levelScreen).to({ y:960},500, Phaser.Easing.Bounce.Out, true);
-		
-		this._state.time.events.loop(1500, upScreen, this );
-		
-		function upScreen(){
+		setTimeout(() => {
+					console.log("Camera Y Position: " + this._state.camera.y);
+			this._state.add.tween(this._levelScreen).to({ y:this._state.camera.y+this._state.game.height},500, Phaser.Easing.Bounce.Out, true);
+				this._state.time.events.loop(1500, upScreen, this );	
+					function upScreen(){
 
-			this._state.add.tween(this._levelScreen).to({ y: 0 },500, Phaser.Easing.Bounce.Out, true);
+			this._state.add.tween(this._levelScreen).to({ y:  -this._state.game.height },500, Phaser.Easing.Bounce.Out, true);
 		
 		}
 		
+		}, 200); // Espera 100ms, ajusta si es necesario
+  		
+		
+		
+	
 
 		}
 
@@ -528,7 +532,7 @@
 		
 
 			this._player.sounds.finLevel.play("finLevel",0, 0.5, false, true);
-			this._state.add.tween(this._winScreen).to({ y: -960 },500, Phaser.Easing.Bounce.Out, true);
+			this._state.add.tween(this._winScreen).to({ y: this._state.camera.y }, 500, Phaser.Easing.Bounce.Out, true);
 			this._state.time.events.add(1700, doGameOver, this );
 			this.timerVar.loop=false;
 			this.timerVar.timer.stop=true;
@@ -542,7 +546,7 @@
 			this.finalAnimation.yoyo(true, 200);
 
 			function doGameOver(){
-					this._state.add.tween(this._winScreen).to({ y: 0 },500, Phaser.Easing.Bounce.Out, true);
+					this._state.add.tween(this._winScreen).to({ y:-this._state.game.height},500, Phaser.Easing.Bounce.Out, true);
 			}
 		
 		
@@ -558,12 +562,12 @@
 	PlatformerBehavior.prototype.NextLevel = function() {
 
 		    window.nextSceneKey = this._nextLevel;
-		this._player.game.camera.fade(0x000000, 200);
-		console.log("will load " + this._nextLevel);	
-	// Supón que window.Level2 es el constructor de la escena "Level2"
-this._state.game.state.add(this._nextLevel, window[this._nextLevel]);
-		this._state.game.state.start(this._nextLevel, true, true, this._vidas);
-		
+			this._player.game.camera.fade(0x000000, 200);
+			console.log("will load " + this._nextLevel);	
+		// Supón que window.Level2 es el constructor de la escena "Level2"
+			this._state.game.state.add(this._nextLevel, window[this._nextLevel]);
+			this._state.game.state.start(this._nextLevel, true, true, this._vidas);
+			
 
 		};
 
@@ -580,9 +584,7 @@ this._state.game.state.add(this._nextLevel, window[this._nextLevel]);
 		
 		PlatformerBehavior.prototype.startTimer = function() {
 			 //  Create our Timer
-	
-			
-	
+
 		  this.timerVar = this._state.time.events.loop(1000, function(){
 		    	this.initialTime++;
 		    	this.elapsedTimer = this.formatTime(this.initialTime);
@@ -596,8 +598,6 @@ this._state.game.state.add(this._nextLevel, window[this._nextLevel]);
 	
 		PlatformerBehavior.prototype.coining=function(player, coin){
 			
-			
-
 			console.log("getting score")
 			player.game.state.getCurrentState().behavior.coinsCollected++;
 			var coinsCollected=player.game.state.getCurrentState().behavior.coinsCollected;
@@ -606,8 +606,6 @@ this._state.game.state.add(this._nextLevel, window[this._nextLevel]);
 			
 				player.sounds.fxCoin.play("coin");
 				coin.visible = false;
-				
-			
 				
 				var newScore=(coinsCollected*100)-player.game.state.getCurrentState().behavior.initialTime;
 				if(newScore<=0){
@@ -618,12 +616,17 @@ this._state.game.state.add(this._nextLevel, window[this._nextLevel]);
 				
 				player.data.score=newScore;
 				return newScore;
-				
-			
 
 			
 		}
+		
 	PlatformerBehavior.prototype.update = function() {
+
+		if (typeof this.prevDirX === 'undefined') {
+			this.prevDirX = this.dirX;
+		}
+
+
 		emitter.x=this._state.camera.x;
 		this._levelScreen.x=this._state.camera.x;
 		this._winScreen.x=this._state.camera.x;
@@ -644,6 +647,63 @@ this._state.game.state.add(this._nextLevel, window[this._nextLevel]);
 
 		this._platafmove.forEach(this.updatePlatform, this);	
 	
+		// Teclas
+		var cursors = this._state.input.keyboard.createCursorKeys();
+		var keyA = this._state.input.keyboard.addKey(Phaser.Keyboard.A);
+		var keyD = this._state.input.keyboard.addKey(Phaser.Keyboard.D);
+		var keyW = this._state.input.keyboard.addKey(Phaser.Keyboard.W);
+		var keyS = this._state.input.keyboard.addKey(Phaser.Keyboard.S);
+		var keySpace = this._state.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+		if (cursors.down.isDown || keyS.isDown) {	
+			this.Dx = 0;
+		} 
+		// Izquierda
+		if (cursors.left.isDown || keyA.isDown) {
+			this.dirX = -1;
+			if (this.dirX !== this.prevDirX) {
+				this.Dx = 0; // Resetea velocidad si cambió de dirección
+			}
+			if (this.Dx < this.maxPower) {
+				this.Dx += 6; // Puedes ajustar el incremento
+			}
+		} 
+		// Derecha
+		else if (cursors.right.isDown || keyD.isDown) {
+			this.dirX = 1;
+			if (this.dirX !== this.prevDirX) {
+				this.Dx = 0; // Resetea velocidad si cambió de dirección
+			}
+			if (this.Dx < this.maxPower) {
+				this.Dx += 6;
+			}
+		} 
+		// Si no se presiona ninguna tecla lateral, reduce la velocidad
+		else {
+			if (this.Dx > 0) {
+				this.Dx -= this.AirFriction;
+				if (this.Dx < 0) this.Dx = 0;
+			}
+		}
+
+		this.prevDirX = this.dirX;
+
+		// Arriba (emula salto/vuelo)
+		if ((cursors.up.isDown || keyW.isDown || keySpace.isDown) && this._canFly) {
+            this._velocity.y = -200;
+            // Emitir sonido de flotar
+            this._player.sounds.fxPblow.play("playerBlow");
+            if (this.canAnimateFly) {
+                this.flyAnim = this._state.add.tween(this._player.scale).to({ x: 1.05, y: 1.05 }, 100, Phaser.Easing.Linear.None, true, 100, 0);
+                this.flyAnim.yoyo(true, 50);
+                this.flyAnim.onComplete.add(function () {
+                    this.canAnimateFly = true;
+                }, this);
+                this.canAnimateFly = false;
+            }
+        }
+
+
+
 
 		if(this._playing ){
 
@@ -739,7 +799,7 @@ this._state.game.state.add(this._nextLevel, window[this._nextLevel]);
 		//reducción de velocidad de player en eje x
 		
 		if(this.Dx>=0){
-			this.Dx-=this.AirFriction;	
+		 this.Dx-=this.AirFriction;	
 		}else{
 
 			this.Dx=0;
@@ -811,6 +871,8 @@ PlatformerBehavior.prototype.updatePlatform = function(platform) {
 	}
 	
 };
+
+//# sourceMappingURL=main.js.map
 
 
 

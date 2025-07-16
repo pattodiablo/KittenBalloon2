@@ -1,8 +1,8 @@
 window.onload = function() {
 	
 		//var Pixelratio = window.screen.availWidth / 640;
-	  var width =  640;
-	  var height = 960;
+	  var width =  1031;
+	  var height = 580;
 
 	
 	  
@@ -54,7 +54,7 @@ window.onload = function() {
 
 
 		
-		switch(challengeNumber){
+		switch(1){
 			case 0:
 				game.state.add("Level21", Level21);
 				var wichLevel="Level21";

@@ -1,4 +1,3 @@
-
 // -- user code here --
 var vidasTotales;
 var AllSounds_proto = Object.create(GameSounds.prototype);
@@ -127,15 +126,20 @@ Level.prototype.create = function () {
 	var _player = new Player(this.game, 101.0, 882.0);
 	this.add.existing(_player);
 	
-	var _greatJobScreen = this.add.sprite(0.0, -960.0, 'greatJobScreen');
+	var 
+	_greatJobScreen = this.add.sprite(0.0, -this.game.height, 'greatJobScreen');
+	
+	// Ajusta el tamaño al ancho y alto del juego
+	_greatJobScreen.width = this.game.width;
+	_greatJobScreen.height = this.game.height;
 	
 	var _pauseBtn = this.add.sprite(557.0, 11.0, 'pauseBtn');
 	
 	var _ScreenLevel = this.add.group();
 	
-	var _LevelScreen = this.add.sprite(0.0, -960.0, 'LevelScreen', null, _ScreenLevel);
+	var _LevelScreen = this.add.sprite(0.0, -this.game.height, 'LevelScreen', null, _ScreenLevel);
 	
-	var _PixelFont = this.add.bitmapText(408.0, -438.0, 'PixelFont', '1', 80, _ScreenLevel);
+	var _PixelFont = this.add.bitmapText(900, -this.game.height+300, 'PixelFont', '1', 80, _ScreenLevel);
 	
 	
 	

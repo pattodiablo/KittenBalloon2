@@ -158,7 +158,7 @@ Level13.prototype.create = function () {
 	
 	var _ScreenLevel = this.add.group();
 	
-	var _LevelScreen = this.add.sprite(0.0, -960.0, 'LevelScreen', null, _ScreenLevel);
+	var _LevelScreen = this.add.sprite(0.0, -this.game.height, 'LevelScreen', null, _ScreenLevel);
 	
 	var _PixelFont = this.add.bitmapText(408.0, -438.0, 'PixelFont', '1', 80, _ScreenLevel);
 	
